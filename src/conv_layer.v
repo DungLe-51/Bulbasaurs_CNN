@@ -26,32 +26,63 @@ module conv_layer #(
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             state <= IDLE;
-            done <= 0;
+            done  <= 1'b0;
+            f <= 0; y <= 0; x <= 0; k <= 0;
+            accum <= 0;
         end else begin
-            state <= next_state; 
-            case (state)
-            IDLE: if (enable) begin
-                state <= 1;
-                f <= 0; y <= 0; x <= 0; k <= 0;
-                done <= 0;
+            state <= next_state;
+        end
+    end
+    always @(*) begin
+        next_state = state;
+        done       = 1'b0;
+
+        case (state)
+            IDLE: begin
+                if (enable) begin
+                    next_state = CONV;
+                    f = 0; y = 0; x = 0; k = 0;
+                end
             end
-            if (state == CONV) begin
-                // thực hiện convolution
-                for (f = 0; f < NUM_F1; f = f + 1) begin
-                    for (y = 0; y < IMG_SIZE-2; y = y + 1) begin
-                        for (x = 0; x < IMG_SIZE-2; x = x + 1) begin
-                            accum = bias[f];
-                            for (k = 0; k < 9; k = k + 1) begin
-                                accum = accum + data_in[(y+(k/3))*IMG_SIZE + (x+(k%3))] * kernel[f][k];
+
+            CONV: begin
+                // Tính 1 kernel element mỗi clock
+                if (k == 0) 
+                    accum = bias[f];                    // khởi tạo bias
+                else 
+                    accum = accum;                      // giữ giá trị cũ
+
+                // Tính convolution
+                integer ky = k / 3;
+                integer kx = k % 3;
+                
+                accum = accum + kernel[f][k] * data_in[(y + ky)*IMG_SIZE + (x + kx)];
+
+                // Khi tính xong 9 phần tử kernel → lưu kết quả
+                if (k == 8) begin
+                    conv_out[f*IMG_SIZE*IMG_SIZE + y*IMG_SIZE + x] = accum[DATA_WIDTH+3:4]; // Q8.8
+
+                    // Tăng tọa độ
+                    k = 0;
+                    x = x + 1;
+                    if (x == IMG_SIZE) begin
+                        x = 0;
+                        y = y + 1;
+                        if (y == IMG_SIZE) begin
+                            y = 0;
+                            f = f + 1;
+                            if (f == NUM_F1) begin
+                                next_state = IDLE;
+                                done = 1'b1;
                             end
-                            conv_out[f*IMG_FLAT + y*IMG_SIZE + x] <= accum[DATA_WIDTH+8:8]; // lấy phần có dấu và cắt về DATA_WIDTH
                         end
                     end
+                end else begin
+                    k = k + 1;
                 end
-                done <= 1;
-            end else begin
-                done <= 0;
             end
-        end
+
+            default: next_state = IDLE;
+        endcase
     end
 endmodule
