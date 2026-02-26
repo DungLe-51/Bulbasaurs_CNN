@@ -14,9 +14,15 @@ module CNN_top#(
     */
 )(
     input clk,reset,enable,
-    input signed [DATA_WIDTH-1:0] data_in [0:IMG_SIZE*IMG_SIZE-1],
+    input signed [DATA_WIDTH-1:0] data_in [0:IMG_FLAT-1],
     output signed [DATA_WIDTH-1:0] rho_out,
     output done
 );
+    wire conv1_done, pool1_done, conv2_done, pool2_done, fc1_done, fc2_done;
+    wire signed [DATA_WIDTH-1:0] conv1_out [0:IMG_FLAT*8-1];
+    wire signed [DATA_WIDTH-1:0] pool1_out [0:15*15*8-1];
+    wire signed [DATA_WIDTH-1:0] conv2_out [0:15*15*16-1];
+    wire signed [DATA_WIDTH-1:0] pool2_out [0:7*7*16-1];
+    wire signed [DATA_WIDTH-1:0] fc1_out  [0:127];
 
 endmodule   
