@@ -22,7 +22,7 @@ module CNN_top#(
     wire signed [DATA_WIDTH-1:0] conv1_out [0:IMG_FLAT*8-1];
     wire signed [DATA_WIDTH-1:0] pool1_out [0:15*15*8-1];
     wire signed [DATA_WIDTH-1:0] conv2_out [0:15*15*16-1];
-    wire signed [DATA_WIDTH-1:0] pool2_out [0:7*7*16-1];
+    wire signed [DATA_WIDTH-1:0] pool2_out [0:FLAT-1];
     wire signed [DATA_WIDTH-1:0] fc1_out  [0:127];
 
 endmodule   
