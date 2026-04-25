@@ -1,0 +1,28 @@
+# 1. Chặn file cực lớn và file nén
+*.bin
+*.zip
+*.tar.gz
+*.h5
+
+# 2. Chặn rác Vivado Log
+vivado*.jou
+vivado*.log
+vivado*.str
+.Xil/
+
+# 3. Chặn môi trường ảo và Source Code FINN gốc
+finn/
+finn_env/
+__pycache__/
+
+# 4. Chặn rác biên dịch của dự án Vivado SoC
+DeepDAS_PCIe_SoC/*.runs/
+DeepDAS_PCIe_SoC/*.cache/
+DeepDAS_PCIe_SoC/*.hw/
+DeepDAS_PCIe_SoC/*.sim/
+DeepDAS_PCIe_SoC/*.ip_user_files/
+*.npy
+*.npz
+*.png
+*.pth
+*.qonnx

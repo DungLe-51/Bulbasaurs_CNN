@@ -1,0 +1,251 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xFC57536C3F7124E",
+      "device": "xc7vx485tffg1761-2",
+      "gen_directory": "../../../../DeepDAS_PCIe_SoC.gen/sources_1/bd/deepdas_top",
+      "name": "deepdas_top",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2"
+    },
+    "design_tree": {
+      "finn_design_0": "",
+      "xdma_0": "",
+      "util_ds_buf": "",
+      "clk_wiz": "",
+      "rst_clk_wiz_100M": ""
+    },
+    "interface_ports": {
+      "pcie_7x_mgt_rtl": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:pcie_7x_mgt:1.0",
+        "vlnv": "xilinx.com:interface:pcie_7x_mgt_rtl:1.0",
+        "hdl_attributes": {
+          "LOCKED": {
+            "value": "FALSE",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "rxn": {
+            "physical_name": "pcie_7x_mgt_rtl_rxn",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "rxp": {
+            "physical_name": "pcie_7x_mgt_rtl_rxp",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "txn": {
+            "physical_name": "pcie_7x_mgt_rtl_txn",
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "txp": {
+            "physical_name": "pcie_7x_mgt_rtl_txp",
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sys_diff_clock": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          }
+        },
+        "hdl_attributes": {
+          "LOCKED": {
+            "value": "FALSE",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_N": {
+            "physical_name": "sys_diff_clock_clk_n",
+            "direction": "I"
+          },
+          "CLK_P": {
+            "physical_name": "sys_diff_clock_clk_p",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "ports": {
+      "reset_rtl": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      }
+    },
+    "components": {
+      "finn_design_0": {
+        "vlnv": "xilinx_finn:finn:finn_design:1.0",
+        "ip_revision": "2",
+        "xci_name": "deepdas_top_finn_design_0_0",
+        "xci_path": "ip/deepdas_top_finn_design_0_0/deepdas_top_finn_design_0_0.xci",
+        "inst_hier_path": "finn_design_0",
+        "has_run_ip_tcl": "true"
+      },
+      "xdma_0": {
+        "vlnv": "xilinx.com:ip:xdma:4.2",
+        "ip_revision": "2",
+        "xci_name": "deepdas_top_xdma_0_0",
+        "xci_path": "ip/deepdas_top_xdma_0_0/deepdas_top_xdma_0_0.xci",
+        "inst_hier_path": "xdma_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "SYS_RST_N_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "mode_selection": {
+            "value": "Basic"
+          },
+          "pl_link_cap_max_link_speed": {
+            "value": "5.0_GT/s"
+          },
+          "pl_link_cap_max_link_width": {
+            "value": "X1"
+          },
+          "xdma_axi_intf_mm": {
+            "value": "AXI_Memory_Mapped"
+          },
+          "xdma_rnum_chnl": {
+            "value": "2"
+          },
+          "xdma_wnum_chnl": {
+            "value": "2"
+          }
+        },
+        "interface_ports": {
+          "M_AXI": {
+            "bd_attributes": {
+              "TYPE": {
+                "value": "END_POINT",
+                "value_src": "auto"
+              }
+            },
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "M_AXI",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFFFFFFFFFF",
+              "width": "64"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "M_AXI": {
+              "range": "16E",
+              "width": "64"
+            }
+          }
+        }
+      },
+      "util_ds_buf": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "9",
+        "xci_name": "deepdas_top_util_ds_buf_0",
+        "xci_path": "ip/deepdas_top_util_ds_buf_0/deepdas_top_util_ds_buf_0.xci",
+        "inst_hier_path": "util_ds_buf",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "DIFF_CLK_IN_BOARD_INTERFACE": {
+            "value": "sys_diff_clock"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "17",
+        "xci_name": "deepdas_top_clk_wiz_1",
+        "xci_path": "ip/deepdas_top_clk_wiz_1/deepdas_top_clk_wiz_1.xci",
+        "inst_hier_path": "clk_wiz",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "100.0"
+          }
+        }
+      },
+      "rst_clk_wiz_100M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "17",
+        "xci_name": "deepdas_top_rst_clk_wiz_100M_0",
+        "xci_path": "ip/deepdas_top_rst_clk_wiz_100M_0/deepdas_top_rst_clk_wiz_100M_0.xci",
+        "inst_hier_path": "rst_clk_wiz_100M",
+        "has_run_ip_tcl": "true"
+      }
+    },
+    "interface_nets": {
+      "sys_diff_clock_1": {
+        "interface_ports": [
+          "sys_diff_clock",
+          "util_ds_buf/CLK_IN_D"
+        ]
+      },
+      "xdma_0_pcie_mgt": {
+        "interface_ports": [
+          "pcie_7x_mgt_rtl",
+          "xdma_0/pcie_mgt"
+        ]
+      }
+    },
+    "nets": {
+      "clk_wiz_clk_out1": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "finn_design_0/ap_clk",
+          "rst_clk_wiz_100M/slowest_sync_clk"
+        ]
+      },
+      "clk_wiz_locked": {
+        "ports": [
+          "clk_wiz/locked",
+          "rst_clk_wiz_100M/dcm_locked"
+        ]
+      },
+      "reset_rtl_1": {
+        "ports": [
+          "reset_rtl",
+          "xdma_0/sys_rst_n"
+        ]
+      },
+      "rst_clk_wiz_100M_peripheral_aresetn": {
+        "ports": [
+          "rst_clk_wiz_100M/peripheral_aresetn",
+          "finn_design_0/ap_rst_n"
+        ]
+      },
+      "util_ds_buf_IBUF_OUT": {
+        "ports": [
+          "util_ds_buf/IBUF_OUT",
+          "xdma_0/sys_clk"
+        ]
+      }
+    }
+  }
+}
