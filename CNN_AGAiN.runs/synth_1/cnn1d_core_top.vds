@@ -1,0 +1,629 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Apr 30 13:56:29 2026
+# Process ID         : 3172
+# Current directory  : D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.runs/synth_1
+# Command line       : vivado.exe -log cnn1d_core_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cnn1d_core_top.tcl
+# Log file           : D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.runs/synth_1/cnn1d_core_top.vds
+# Journal file       : D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.runs/synth_1\vivado.jou
+# Running On         : WIN-PRO
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
+# CPU Frequency      : 2712 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 17037 MB
+# Swap memory        : 1073 MB
+# Total Virtual      : 18110 MB
+# Available Virtual  : 4141 MB
+#-----------------------------------------------------------
+source cnn1d_core_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 642.941 ; gain = 202.508
+Command: synth_design -top cnn1d_core_top -part xc7vx485tffg1761-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13564
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1115.945 ; gain = 470.027
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cnn1d_core_top' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/cnn1D_core_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'layer_desc_regs' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/layer_desc.sv:3]
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001100 
+	Parameter LEN_W bound to: 32'sb00000000000000000000000000010000 
+	Parameter CH_W bound to: 32'sb00000000000000000000000000010000 
+	Parameter K_W bound to: 32'sb00000000000000000000000000001000 
+INFO: [Synth 8-6155] done synthesizing module 'layer_desc_regs' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/layer_desc.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'cnn1d_controller' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/cnn1d_controller.sv:3]
+	Parameter LEN_W bound to: 32'sb00000000000000000000000000010000 
+	Parameter CH_W bound to: 32'sb00000000000000000000000000010000 
+	Parameter K_W bound to: 32'sb00000000000000000000000000001000 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/cnn1d_controller.sv:92]
+INFO: [Synth 8-6155] done synthesizing module 'cnn1d_controller' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/cnn1d_controller.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'padding_dilation_unit' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/padding.sv:3]
+	Parameter LEN_W bound to: 32'sb00000000000000000000000000010000 
+	Parameter K_W bound to: 32'sb00000000000000000000000000001000 
+INFO: [Synth 8-6155] done synthesizing module 'padding_dilation_unit' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/padding.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ifm_addr_gen_1d' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/ifm_addr_gen.sv:3]
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001100 
+	Parameter LEN_W bound to: 32'sb00000000000000000000000000010000 
+	Parameter CH_W bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-6155] done synthesizing module 'ifm_addr_gen_1d' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/ifm_addr_gen.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ofm_addr_gen_1d' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/ofm_addr_gen.sv:3]
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001100 
+	Parameter LEN_W bound to: 32'sb00000000000000000000000000010000 
+	Parameter CH_W bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-6155] done synthesizing module 'ofm_addr_gen_1d' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/ofm_addr_gen.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'weight_addr_gen' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/weight_addr_gen.sv:3]
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001100 
+	Parameter CH_W bound to: 32'sb00000000000000000000000000010000 
+	Parameter K_W bound to: 32'sb00000000000000000000000000001000 
+INFO: [Synth 8-6155] done synthesizing module 'weight_addr_gen' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/weight_addr_gen.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'bank_loader' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/bank_loader.sv:3]
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001100 
+INFO: [Synth 8-6155] done synthesizing module 'bank_loader' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/bank_loader.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ifm_pingpong_bank' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/ifm_pingpong_bank.sv:3]
+	Parameter DATA_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001100 
+	Parameter DEPTH bound to: 32'sb00000000000000000001000000000000 
+INFO: [Synth 8-6157] synthesizing module 'tdp_bram_1clk' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new/tdp_bram_1clk.sv:22]
+	Parameter DATA_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001100 
+	Parameter DEPTH bound to: 32'sb00000000000000000001000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'tdp_bram_1clk' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new/tdp_bram_1clk.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'ifm_pingpong_bank' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/ifm_pingpong_bank.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'weight_sram_bank' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/weight_sram_bank.sv:3]
+	Parameter DATA_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001100 
+	Parameter DEPTH bound to: 32'sb00000000000000000001000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'weight_sram_bank' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/weight_sram_bank.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'bias_scale_bank' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/bias_scale_bank.sv:3]
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000100000000 
+INFO: [Synth 8-6157] synthesizing module 'tdp_bram_1clk__parameterized0' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new/tdp_bram_1clk.sv:22]
+	Parameter DATA_W bound to: 32'sb00000000000000000000000000100000 
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000100000000 
+INFO: [Synth 8-6155] done synthesizing module 'tdp_bram_1clk__parameterized0' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new/tdp_bram_1clk.sv:22]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/bias_scale_bank.sv:112]
+INFO: [Synth 8-6155] done synthesizing module 'bias_scale_bank' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/bias_scale_bank.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'pe_array' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/pe_array.sv:3]
+	Parameter LANES bound to: 32'sb00000000000000000000000000000001 
+	Parameter DATA_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter WGT_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter ACC_W bound to: 32'sb00000000000000000000000000100000 
+INFO: [Synth 8-6157] synthesizing module 'pe_lane' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/pe_lane.sv:3]
+	Parameter DATA_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter WGT_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter ACC_W bound to: 32'sb00000000000000000000000000100000 
+INFO: [Synth 8-6157] synthesizing module 'mac_int8' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/mac_int8.sv:3]
+	Parameter DATA_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter WGT_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter ACC_W bound to: 32'sb00000000000000000000000000100000 
+INFO: [Synth 8-6155] done synthesizing module 'mac_int8' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/mac_int8.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'pe_lane' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/pe_lane.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'adder_tree' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/adder_tree_1D.sv:3]
+	Parameter N bound to: 32'sb00000000000000000000000000000001 
+	Parameter ACC_W bound to: 32'sb00000000000000000000000000100000 
+INFO: [Synth 8-6155] done synthesizing module 'adder_tree' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/adder_tree_1D.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'pe_array' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/pe_array.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'requantize' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/requanitize.sv:3]
+	Parameter ACC_W bound to: 32'sb00000000000000000000000000100000 
+	Parameter OUT_W bound to: 32'sb00000000000000000000000000001000 
+INFO: [Synth 8-6155] done synthesizing module 'requantize' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/requanitize.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'activation_relu' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/activation_relu.sv:3]
+	Parameter DATA_W bound to: 32'sb00000000000000000000000000001000 
+INFO: [Synth 8-6155] done synthesizing module 'activation_relu' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/activation_relu.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'maxpool1d' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/maxpool1D.sv:3]
+	Parameter DATA_W bound to: 32'sb00000000000000000000000000001000 
+INFO: [Synth 8-6155] done synthesizing module 'maxpool1d' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/maxpool1D.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'writeback_unit' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/write_back.sv:3]
+	Parameter DATA_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001100 
+INFO: [Synth 8-6155] done synthesizing module 'writeback_unit' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/write_back.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ofm_pingpong_bank' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/ofm_pingpong_bank.sv:3]
+	Parameter DATA_W bound to: 32'sb00000000000000000000000000001000 
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001100 
+	Parameter DEPTH bound to: 32'sb00000000000000000001000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'ofm_pingpong_bank' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/ofm_pingpong_bank.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'bank_arbiter' [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/bank_arbiter.sv:3]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/bank_arbiter.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'bank_arbiter' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/bank_arbiter.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'cnn1d_core_top' (0#1) [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/cnn1D_core_top.sv:3]
+WARNING: [Synth 8-3936] Found unconnected internal register 'addr_long_reg' and it is trimmed from '44' to '12' bits. [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/ifm_addr_gen.sv:17]
+WARNING: [Synth 8-3936] Found unconnected internal register 'addr_long_reg' and it is trimmed from '44' to '12' bits. [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/ofm_addr_gen.sv:17]
+WARNING: [Synth 8-3936] Found unconnected internal register 'addr_long_reg' and it is trimmed from '44' to '12' bits. [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/imports/new/weight_addr_gen.sv:24]
+WARNING: [Synth 8-7129] Port host_wdata_i[31] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[30] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[29] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[28] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[27] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[26] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[25] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[24] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[23] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[22] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[21] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[20] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[19] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[18] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[17] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[16] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[15] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[14] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[13] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[12] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[11] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[10] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[9] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[8] in module ofm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst_n in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[31] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[30] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[29] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[28] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[27] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[26] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[25] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[24] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[23] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[22] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[21] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[20] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[19] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[18] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[17] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[16] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[15] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[14] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[13] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[12] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[11] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[10] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[9] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[8] in module weight_sram_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[31] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[30] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[29] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[28] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[27] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[26] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[25] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[24] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[23] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[22] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[21] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[20] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[19] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[18] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[17] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[16] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[15] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[14] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[13] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[12] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[11] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[10] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[9] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_wdata_i[8] in module ifm_pingpong_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oc_i[15] in module weight_addr_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oc_i[14] in module weight_addr_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oc_i[13] in module weight_addr_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oc_i[12] in module weight_addr_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ic_i[15] in module weight_addr_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ic_i[14] in module weight_addr_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ic_i[13] in module weight_addr_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ic_i[12] in module weight_addr_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cin_i[15] in module weight_addr_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cin_i[14] in module weight_addr_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cin_i[13] in module weight_addr_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cin_i[12] in module weight_addr_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port channel_i[15] in module ofm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port channel_i[14] in module ofm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port channel_i[13] in module ofm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port channel_i[12] in module ofm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_i[15] in module ofm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_i[14] in module ofm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_i[13] in module ofm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pos_i[12] in module ofm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port len_i[15] in module ofm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port len_i[14] in module ofm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port len_i[13] in module ofm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port len_i[12] in module ofm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port channel_i[15] in module ifm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port channel_i[14] in module ifm_addr_gen_1d is either unconnected or has no load
+WARNING: [Synth 8-7129] Port channel_i[13] in module ifm_addr_gen_1d is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1228.125 ; gain = 582.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1228.125 ; gain = 582.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1761-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1228.125 ; gain = 582.207
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx485tffg1761-1
+INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'cnn1d_controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                      00000010000 |                             0000
+             ST_VALIDATE |                      00001000000 |                             0001
+            ST_BIAS_READ |                      00000001000 |                             0010
+            ST_BIAS_WAIT |                      00000000001 |                             0011
+             ST_INIT_ACC |                      00000000010 |                             0100
+             ST_MAC_READ |                      00000000100 |                             0101
+            ST_MAC_ACCUM |                      10000000000 |                             0110
+                 ST_POST |                      00010000000 |                             0111
+            ST_OFM_WRITE |                      00100000000 |                             1000
+                 ST_DONE |                      01000000000 |                             1001
+                ST_ERROR |                      00000100000 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_q_reg' using encoding 'one-hot' in module 'cnn1d_controller'
+INFO: [Synth 8-3971] The signal "tdp_bram_1clk:/mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "tdp_bram_1clk__parameterized0:/mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1228.125 ; gain = 582.207
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   3 Input   64 Bit       Adders := 1     
+	   4 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 5     
+	   2 Input    8 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 7     
+	               16 Bit    Registers := 6     
+	               12 Bit    Registers := 4     
+	                8 Bit    Registers := 16    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---RAMs : 
+	              32K Bit	(4096 X 8 bit)          RAMs := 5     
+	               8K Bit	(256 X 32 bit)          RAMs := 3     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 6     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 7     
+	   3 Input   16 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	  11 Input   11 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 8     
+	   2 Input    8 Bit        Muxes := 11    
+	   3 Input    8 Bit        Muxes := 1     
+	  11 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 13    
+	   4 Input    1 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 2     
+	  11 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP valid_o4, operation Mode is: A*B.
+DSP Report: operator valid_o4 is absorbed into DSP valid_o4.
+DSP Report: Generating DSP addr_long3, operation Mode is: C+A*B.
+DSP Report: operator addr_long3 is absorbed into DSP addr_long3.
+DSP Report: operator addr_long4 is absorbed into DSP addr_long3.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP round_s0, operation Mode is: A*B.
+DSP Report: operator round_s0 is absorbed into DSP round_s0.
+DSP Report: operator round_s0 is absorbed into DSP round_s0.
+DSP Report: Generating DSP round_s0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator round_s0 is absorbed into DSP round_s0.
+DSP Report: operator round_s0 is absorbed into DSP round_s0.
+DSP Report: Generating DSP round_s0, operation Mode is: A*B.
+DSP Report: operator round_s0 is absorbed into DSP round_s0.
+DSP Report: operator round_s0 is absorbed into DSP round_s0.
+DSP Report: Generating DSP round_s0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator round_s0 is absorbed into DSP round_s0.
+DSP Report: operator round_s0 is absorbed into DSP round_s0.
+DSP Report: Generating DSP u_ifm_addr_gen/addr_o2, operation Mode is: A*B.
+DSP Report: operator u_ifm_addr_gen/addr_o2 is absorbed into DSP u_ifm_addr_gen/addr_o2.
+DSP Report: Generating DSP u_ifm_addr_gen/addr_o0, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator u_ifm_addr_gen/addr_o0 is absorbed into DSP u_ifm_addr_gen/addr_o0.
+DSP Report: Generating DSP u_ofm_addr_gen/addr_o2, operation Mode is: A*B.
+DSP Report: operator u_ofm_addr_gen/addr_o2 is absorbed into DSP u_ofm_addr_gen/addr_o2.
+DSP Report: Generating DSP u_ofm_addr_gen/addr_o0, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator u_ofm_addr_gen/addr_o0 is absorbed into DSP u_ofm_addr_gen/addr_o0.
+WARNING: [Synth 8-6014] Unused sequential element u_ifm_bank/u_ping_bram/mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element u_ifm_bank/u_pong_bram/mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element u_weight_bank/u_weight_bram/mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element u_bias_scale_bank/u_bias_bram/mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element u_bias_scale_bank/u_mult_bram/mem_reg was removed. 
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_bias_scale_bank/u_shift_bram/b_rdata_o_reg' and it is trimmed from '32' to '5' bits. [D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new/tdp_bram_1clk.sv:57]
+WARNING: [Synth 8-6014] Unused sequential element u_bias_scale_bank/u_shift_bram/mem_reg was removed. 
+INFO: [Synth 8-3971] The signal "cnn1d_core_top/u_ofm_bank/u_ping_bram/mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "cnn1d_core_top/u_ofm_bank/u_pong_bram/mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 1763.020 ; gain = 1117.102
+---------------------------------------------------------------------------------
+ Sort Area is  round_s0_7 : 0 0 : 2701 4861 : Used 1 time 0
+ Sort Area is  round_s0_7 : 0 1 : 2160 4861 : Used 1 time 0
+ Sort Area is  round_s0_a : 0 0 : 2158 3958 : Used 1 time 0
+ Sort Area is  round_s0_a : 0 1 : 1800 3958 : Used 1 time 0
+ Sort Area is  u_ifm_addr_gen/addr_o2_d : 0 0 : 1049 1141 : Used 1 time 0
+ Sort Area is  u_ifm_addr_gen/addr_o2_d : 0 1 : 92 1141 : Used 1 time 0
+ Sort Area is  u_ofm_addr_gen/addr_o2_10 : 0 0 : 1049 1141 : Used 1 time 0
+ Sort Area is  u_ofm_addr_gen/addr_o2_10 : 0 1 : 92 1141 : Used 1 time 0
+ Sort Area is  addr_long3_2 : 0 0 : 1084 1084 : Used 1 time 0
+ Sort Area is  valid_o4_0 : 0 0 : 1007 1007 : Used 1 time 0
+ Sort Area is  p_0_out_4 : 0 0 : 666 748 : Used 1 time 0
+ Sort Area is  p_0_out_4 : 0 1 : 82 748 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++---------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name    | RTL Object                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|cnn1d_core_top | u_ifm_bank/u_ping_bram/mem_reg         | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_ifm_bank/u_pong_bram/mem_reg         | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_weight_bank/u_weight_bram/mem_reg    | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_bias_scale_bank/u_bias_bram/mem_reg  | 256 x 32(READ_FIRST)   | W | R | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_bias_scale_bank/u_mult_bram/mem_reg  | 256 x 32(READ_FIRST)   | W | R | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_bias_scale_bank/u_shift_bram/mem_reg | 256 x 32(READ_FIRST)   | W | R | 256 x 5(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_ofm_bank/u_ping_bram/mem_reg         | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(READ_FIRST)    | W | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_ofm_bank/u_pong_bram/mem_reg         | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(READ_FIRST)    | W | R | Port A and B     | 0      | 1      | 
++---------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++----------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name           | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|padding_dilation_unit | A*B              | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|weight_addr_gen       | C+A*B            | 12     | 12     | 12     | -      | 12     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|weight_addr_gen       | A*B              | 12     | 8      | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|weight_addr_gen       | PCIN+(A:0x0):B+C | 30     | 12     | 8      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|requantize            | A*B              | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|requantize            | (PCIN>>17)+A*B   | 15     | 15     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|requantize            | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|requantize            | (PCIN>>17)+A*B   | 18     | 15     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ifm_addr_gen_1d       | A*B              | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cnn1d_core_top        | PCIN+(A:0x0):B+C | 30     | 12     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ofm_addr_gen_1d       | A*B              | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cnn1d_core_top        | PCIN+(A:0x0):B+C | 30     | 12     | 12     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++----------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 1763.020 ; gain = 1117.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++---------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name    | RTL Object                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|cnn1d_core_top | u_ifm_bank/u_ping_bram/mem_reg         | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_ifm_bank/u_pong_bram/mem_reg         | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_weight_bank/u_weight_bram/mem_reg    | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_bias_scale_bank/u_bias_bram/mem_reg  | 256 x 32(READ_FIRST)   | W | R | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_bias_scale_bank/u_mult_bram/mem_reg  | 256 x 32(READ_FIRST)   | W | R | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_bias_scale_bank/u_shift_bram/mem_reg | 256 x 32(READ_FIRST)   | W | R | 256 x 5(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_ofm_bank/u_ping_bram/mem_reg         | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(READ_FIRST)    | W | R | Port A and B     | 0      | 1      | 
+|cnn1d_core_top | u_ofm_bank/u_pong_bram/mem_reg         | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(READ_FIRST)    | W | R | Port A and B     | 0      | 1      | 
++---------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance u_ifm_bank/u_ping_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ifm_bank/u_ping_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ifm_bank/u_pong_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ifm_bank/u_pong_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_weight_bank/u_weight_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_weight_bank/u_weight_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_bias_scale_bank/u_bias_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_bias_scale_bank/u_bias_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_bias_scale_bank/u_mult_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_bias_scale_bank/u_mult_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_bias_scale_bank/u_shift_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_bias_scale_bank/u_shift_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ofm_bank/u_ping_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_ofm_bank/u_pong_bram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:57 . Memory (MB): peak = 1763.020 ; gain = 1117.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:14 . Memory (MB): peak = 1914.801 ; gain = 1268.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:14 . Memory (MB): peak = 1914.801 ; gain = 1268.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:14 . Memory (MB): peak = 1914.801 ; gain = 1268.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:14 . Memory (MB): peak = 1914.801 ; gain = 1268.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:14 . Memory (MB): peak = 1916.762 ; gain = 1270.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:14 . Memory (MB): peak = 1916.762 ; gain = 1270.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++----------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name           | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ifm_addr_gen_1d       | A*B          | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cnn1d_core_top        | PCIN+A:B+C   | 0      | 12     | -      | -      | 12     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ofm_addr_gen_1d       | A*B          | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cnn1d_core_top        | PCIN+A:B+C   | 0      | 12     | -      | -      | 12     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|padding_dilation_unit | A*B          | 16     | 8      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|requantize            | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|requantize            | PCIN>>17+A*B | 30     | 18     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|requantize            | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|requantize            | PCIN>>17+A*B | 17     | 18     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|weight_addr_gen       | C+A*B        | 12     | 12     | 12     | -      | 12     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|weight_addr_gen       | A*B          | 12     | 8      | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|weight_addr_gen       | PCIN+A:B+C   | 0      | 12     | -      | -      | 12     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++----------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   123|
+|3     |DSP48E1  |    12|
+|4     |LUT1     |    51|
+|5     |LUT2     |   188|
+|6     |LUT3     |    87|
+|7     |LUT4     |   227|
+|8     |LUT5     |   131|
+|9     |LUT6     |   377|
+|10    |RAMB36E1 |     8|
+|11    |FDCE     |   253|
+|12    |FDPE     |     4|
+|13    |IBUF     |   199|
+|14    |OBUF     |    39|
++------+---------+------+
+
+Report Instance Areas: 
++------+--------------------------------+--------------------------------+------+
+|      |Instance                        |Module                          |Cells |
++------+--------------------------------+--------------------------------+------+
+|1     |top                             |                                |  1700|
+|2     |  u_bias_scale_bank             |bias_scale_bank                 |   287|
+|3     |    u_bias_bram                 |tdp_bram_1clk__parameterized0   |    53|
+|4     |    u_mult_bram                 |tdp_bram_1clk__parameterized0_4 |     3|
+|5     |    u_shift_bram                |tdp_bram_1clk__parameterized0_5 |   227|
+|6     |  u_controller                  |cnn1d_controller                |   235|
+|7     |  u_ifm_addr_gen                |ifm_addr_gen_1d                 |     2|
+|8     |  u_ifm_bank                    |ifm_pingpong_bank               |   119|
+|9     |    u_ping_bram                 |tdp_bram_1clk_2                 |    21|
+|10    |    u_pong_bram                 |tdp_bram_1clk_3                 |    95|
+|11    |  u_layer_desc_regs             |layer_desc_regs                 |   357|
+|12    |  u_maxpool1d                   |maxpool1d                       |     1|
+|13    |  u_ofm_addr_gen                |ofm_addr_gen_1d                 |     2|
+|14    |  u_ofm_bank                    |ofm_pingpong_bank               |    17|
+|15    |    u_ping_bram                 |tdp_bram_1clk_0                 |     3|
+|16    |    u_pong_bram                 |tdp_bram_1clk_1                 |    12|
+|17    |  u_padding_dilation            |padding_dilation_unit           |   117|
+|18    |  u_pe_array                    |pe_array                        |    45|
+|19    |    \gen_pe_lanes[0].u_pe_lane  |pe_lane                         |    45|
+|20    |      u_mac_int8                |mac_int8                        |    45|
+|21    |  u_requantize                  |requantize                      |   209|
+|22    |  u_weight_addr_gen             |weight_addr_gen                 |     3|
+|23    |  u_weight_bank                 |weight_sram_bank                |    27|
+|24    |    u_weight_bram               |tdp_bram_1clk                   |    27|
++------+--------------------------------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:14 . Memory (MB): peak = 1916.762 ; gain = 1270.844
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 180 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:14 . Memory (MB): peak = 1916.762 ; gain = 1270.844
+Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:14 . Memory (MB): peak = 1916.762 ; gain = 1270.844
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.099 . Memory (MB): peak = 1928.832 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 143 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2061.785 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 4f39fc5
+INFO: [Common 17-83] Releasing license: Synthesis
+82 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:25 . Memory (MB): peak = 2061.785 ; gain = 1418.844
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2061.785 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.runs/synth_1/cnn1d_core_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file cnn1d_core_top_utilization_synth.rpt -pb cnn1d_core_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 30 13:58:27 2026...

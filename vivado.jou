@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Apr 30 13:41:15 2026
+# Process ID         : 10768
+# Current directory  : D:/bi ging ghi li/CNN_AGAiN
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent11968 D:\bi ging ghi li\CNN_AGAiN\CNN_AGAiN.xpr
+# Log file           : D:/bi ging ghi li/CNN_AGAiN/vivado.log
+# Journal file       : D:/bi ging ghi li/CNN_AGAiN\vivado.jou
+# Running On         : WIN-PRO
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
+# CPU Frequency      : 2712 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 17037 MB
+# Swap memory        : 1073 MB
+# Total Virtual      : 18110 MB
+# Available Virtual  : 5105 MB
+#-----------------------------------------------------------
+start_gui
+open_project {D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.xpr}
+update_compile_order -fileset sources_1
+remove_files  {{D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/cnn1D_core_top.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/accumulator.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/bias_scale.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/line_buffer1d.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/loop_counter.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/quanitize.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/residual.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/title_scheduler.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/weight_rf.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/window_gen.sv}}
+update_compile_order -fileset sources_1
+remove_files  {{D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/write_back.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/weight_sram_bank.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/weight_addr_gen.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/requanitize.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/padding.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/ofm_pingpong_bank.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/ofm_addr_gen.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/maxpool1D.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/layer_desc.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/ifm_pingpong_bank.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/ifm_addr_gen.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/cnn1d_controller.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/bias_scale_bank.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/bank_loader.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/bank_arbiter.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/activation_relu.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/pe_array.sv}}
+update_compile_order -fileset sources_1
+remove_files  {{D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/adder_tree_1D.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/pe_lane.sv}}
+remove_files  {{D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/mac_int8.sv}}
+add_files -norecurse -scan_for_includes {{D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/activation_relu.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/title_scheduler.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/ifm_pingpong_bank.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/padding.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/weight_addr_gen.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/accumulator.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/pe_lane.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/window_gen.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/bias_scale.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/residual.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/bank_loader.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/layer_desc.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/write_back.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/adder_tree_1D.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/ifm_addr_gen.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/mac_int8.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/maxpool1D.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/pe_array.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/weight_sram_bank.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/ofm_addr_gen.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/bias_scale_bank.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/loop_counter.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/cnn1d_controller.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/ofm_pingpong_bank.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/cnn1D_core_top.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/weight_rf.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/line_buffer1d.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/quanitize.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/requanitize.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/bank_arbiter.sv}}
+import_files -norecurse {{D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/activation_relu.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/title_scheduler.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/ifm_pingpong_bank.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/padding.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/weight_addr_gen.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/accumulator.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/pe_lane.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/window_gen.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/bias_scale.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/residual.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/bank_loader.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/layer_desc.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/write_back.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/adder_tree_1D.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/ifm_addr_gen.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/mac_int8.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/maxpool1D.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/pe_array.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/weight_sram_bank.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/ofm_addr_gen.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/bias_scale_bank.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/loop_counter.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/cnn1d_controller.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/ofm_pingpong_bank.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/cnn1D_core_top.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/weight_rf.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/line_buffer1d.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/quanitize.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/requanitize.sv} {D:/bi ging ghi li/CNN_rework/CNN_rework.srcs/sources_1/new/bank_arbiter.sv}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new
+file mkdir D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new
+file mkdir D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new
+file mkdir D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new
+file mkdir D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new
+file mkdir D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new
+file mkdir {D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new}
+close [ open {D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new/tdp_bram_1clk.sv} w ]
+add_files {{D:/bi ging ghi li/CNN_AGAiN/CNN_AGAiN.srcs/sources_1/new/tdp_bram_1clk.sv}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property part xc7vx485tffg1761-1 [current_project]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1
+wait_on_run impl_1

@@ -1,0 +1,16 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Thu Apr 30 14:12:48 2026
+| Host         : WIN-PRO running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file cnn1d_core_top_bus_skew_routed.rpt -pb cnn1d_core_top_bus_skew_routed.pb -rpx cnn1d_core_top_bus_skew_routed.rpx
+| Design       : cnn1d_core_top
+| Device       : 7vx485t-ffg1761
+| Speed File   : -1  PRODUCTION 1.12 2014-09-11
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+
