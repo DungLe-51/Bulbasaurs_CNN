@@ -1,4 +1,3 @@
-Set-Content -Path 'd:\bi ging ghi li\CNN_AGAiN\readme.md' -Value @'
 # CNN_AGAiN
 
 `CNN_AGAiN` là một thiết kế RTL SystemVerilog cho bộ xử lý CNN 1D mục đích tổng hợp trên FPGA bằng Vivado.
@@ -119,6 +118,3 @@ Set-Content -Path 'd:\bi ging ghi li\CNN_AGAiN\readme.md' -Value @'
 - `maxpool1D.sv`
 - `write_back.sv`
 
-## Tổng kết
-Dự án `CNN_AGAiN` là một thiết kế RTL đầy đủ cho bộ xử lý CNN 1D trên FPGA, bao gồm điều khiển luồng, địa chỉ hóa bộ nhớ, xử lý MAC, hậu xử lý và giao diện host. README này cung cấp cái nhìn toàn diện về chức năng, cấu trúc và cách sử dụng dự án.
-'@
